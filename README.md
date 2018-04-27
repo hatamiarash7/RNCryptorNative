@@ -31,7 +31,7 @@ String decrypted = rncryptor.decrypt(encrypted, password)
   
 String password = "StrongGeneratedPasswordxD";
   
-RNCryptorNative.encryptAsync("test", password, new RNCryptorNative.Callback() {
+RNCryptorNative.encryptAsync("test", password, new RNCryptorNative.RNCryptorNativeCallback() {
     @Override
     public void done(String encrypted, Exception e) {
         System.out.println("encrypted async: " + encrypted);
@@ -39,7 +39,7 @@ RNCryptorNative.encryptAsync("test", password, new RNCryptorNative.Callback() {
 });
 
 //Decrypt
-RNCryptorNative.decryptAsync(encrypted, password, new RNCryptorNative.Callback() {
+RNCryptorNative.decryptAsync(encrypted, password, new RNCryptorNative.RNCryptorNativeCallback() {
     @Override
     public void done(String decrypted, Exception e) {
         System.out.println("decrypted async: " + decrypted);
